@@ -63,12 +63,20 @@ endif;
                   <option value="">Select Staff Type</option>
                      <?php
                       $total = count($stafftype);
-                      for($i = 0; $i < $total; $i++){ ?>
+                      for($i = 0; $i < $total; $i++){ 
+                        
+                        if($stafftype[$i]["status"]==1)
+                        {
+
+                       
+                        
+                        ?>
                      
                     <option value="<?php echo $stafftype[$i]["boutique_work_staff_type_id"]; ?>"><?php echo $stafftype[$i]["boutique_work_staff_type_name"]; ?></option>
                     
                      <?php 
                     }
+                  }
                        ?>
                        
                   </select>
@@ -121,6 +129,22 @@ endif;
             </div>
           </div>
         <?php } ?>
+
+       
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Status</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="fa fa-dot-circle-o"></span></span>
+                  <select name="wage" class="form-control">
+                    <option value="1">Active</option>
+                    <option value="0">In Active</option>
+                  </select>
+                </div>
+            </div>
+          </div>
+
 
           <div class="col-md-12">
             <div class="form-group">

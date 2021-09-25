@@ -4,6 +4,7 @@ class Tailor_model extends CI_Model {
 	function m_addtailor($newfileName) {
 		$name = $this->input->post('name');
 		$email = $this->input->post('email');
+		// $status =$this->input->post('status');
 		$phone = $this->input->post('phone');
 		$address = $this->input->post('address');
 		$boutique_staff_type = @$this->input->post('boutique_staff_type');
@@ -133,6 +134,9 @@ class Tailor_model extends CI_Model {
 		return true;
 	}
 	function stafftype() {
+
+		$status=@$this->input->post('status');
+
 		$this->db->select( '*');
 		$this->db->from('b_boutique_work_staff_types');
 		$this->db->where('boutique_id', $this->session->userdata('BoutiqueID'));

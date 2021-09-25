@@ -48,11 +48,11 @@
                         <?php echo $stafftype[$i]["boutique_work_staff_type_name"]; ?> </a></td>
                         <td> <?php if($stafftype[$i]["status"]==1)
                         {
-                          echo"active";
+                          echo"Active";
                         } 
                         else
                         {
-                          echo "inactive";
+                          echo "In Active";
                         }
                        
                        
